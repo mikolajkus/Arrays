@@ -67,3 +67,19 @@ function getReversedString(string) {
 
 console.log(getReversedString('Hello!')); // '!olleH'
 console.log(getReversedString('Arrays')); // 'syarrA'
+
+// 5. Write the isPalindrome  function.
+// Inside the isPalindrome function, call the getReversedString function.
+// It should be case-insensitive and shouldn't take spaces into consideration.
+
+function isPalindrome(string) {
+    const replaceCharacters = string.replace(/[^A-Z0-9]/ig, '').toLowerCase();
+    const checkStringReverse = getReversedString(replaceCharacters);
+    return checkStringReverse === replaceCharacters;
+}
+
+
+console.log(isPalindrome('Kayak')); // true
+console.log(isPalindrome('Racecar')); // true
+console.log(isPalindrome('Was it a cat I saw')); // true
+console.log(isPalindrome('Hello!')); // false
