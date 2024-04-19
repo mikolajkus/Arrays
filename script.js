@@ -59,7 +59,7 @@ const squaredNumbers = getSquaredNumbers(numbers);
 console.log(squaredNumbers); // [1, 4, 9]
 console.log(numbers); // [1, 2, 3]
 
-// 4. Write the getReversedString  function.
+// 4. Write the getReversedString function.
 
 function getReversedString(string) {
     return string.split('').reverse().join('');
@@ -68,12 +68,12 @@ function getReversedString(string) {
 console.log(getReversedString('Hello!')); // '!olleH'
 console.log(getReversedString('Arrays')); // 'syarrA'
 
-// 5. Write the isPalindrome  function.
+// 5. Write the isPalindrome function.
 // Inside the isPalindrome function, call the getReversedString function.
 // It should be case-insensitive and shouldn't take spaces into consideration.
 
 function isPalindrome(string) {
-    const replaceCharacters = string.replace(/[^A-Z0-9]/ig, '').toLowerCase();
+    const replaceCharacters = string.replace(/\s/g, '').toLowerCase();
     const checkStringReverse = getReversedString(replaceCharacters);
     return checkStringReverse === replaceCharacters;
 }
@@ -83,3 +83,28 @@ console.log(isPalindrome('Kayak')); // true
 console.log(isPalindrome('Racecar')); // true
 console.log(isPalindrome('Was it a cat I saw')); // true
 console.log(isPalindrome('Hello!')); // false
+
+// 6. Write the countLetters function.
+// It should return an object representing the number of letters in the given text.
+// Ignore spaces and make sure your function is case-insensitive.
+
+function countLetters(text) {
+    const lettersCount = {};
+    const processedText = text.replace(/\s/g, '').toLowerCase();
+    for (let i = 0; i < processedText.length; i++) {
+        const character = processedText[i];
+        if (/[a-z]/.test(character)) {
+
+            if (lettersCount[character]) {
+                lettersCount[character]++;
+            } else {
+                lettersCount[character] = 1;
+            }
+        }
+    }
+    return lettersCount;
+}
+
+const lettersObject = countLetters('The quick brown fox jumps over the lazy dog');
+
+console.log(lettersObject);
