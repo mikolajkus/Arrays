@@ -94,7 +94,6 @@ function countLetters(text) {
     for (let i = 0; i < processedText.length; i++) {
         const character = processedText[i];
         if (/[a-z]/.test(character)) {
-
             if (lettersCount[character]) {
                 lettersCount[character]++;
             } else {
