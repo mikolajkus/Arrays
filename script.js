@@ -17,8 +17,8 @@ console.log(
 
 function getSmallestNumberBySort(arrayOfNumbers) {
     const sortedArray = arrayOfNumbers.sort(
-        function(a, b) {
-            return a - b;
+        function(firstNumber, secondNumber) {
+            return firstNumber - secondNumber;
         }
     );
     return sortedArray[0];
@@ -107,3 +107,52 @@ function countLetters(text) {
 const lettersObject = countLetters('The quick brown fox jumps over the lazy dog');
 
 console.log(lettersObject);
+
+// 7.Write the getAgeDifference function that finds the difference between the youngest and oldest person.
+// Inside of the getAgeDifference function call the getYoungestPerson  and getOldestPerson functions that you write yourself.
+
+
+const peopleArray = [
+  {
+    name: 'Adam',
+    age: 20
+  },
+  {
+    name: 'Amanda',
+    age: 5
+  },
+  {
+    name: 'John',
+    age: 75
+  },
+  {
+    name: 'Dave',
+    age: 15
+  }
+]
+
+console.log(getAgeDifference(peopleArray)); // 70
+
+function getYoungestPerson(people) {
+    const userSortedByAge = people.slice().sort(
+        function (firstUser, secondUser) {
+            return firstUser.age - secondUser.age;
+        }
+    )
+    return userSortedByAge[0];
+}
+
+function getOldestPerson(people) {
+    const userSortedByAge = people.slice().sort(
+        function (firstUser, secondUser) {
+            return firstUser.age - secondUser.age;
+        }
+    )
+    return userSortedByAge[userSortedByAge.length - 1];
+}
+
+function getAgeDifference(people) {
+    const youngestPerson = getYoungestPerson(people);
+    const oldestPerson = getOldestPerson(people);
+    return oldestPerson.age - youngestPerson.age;
+}
