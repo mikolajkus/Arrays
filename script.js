@@ -155,3 +155,19 @@ function getAgeDifference(people) {
     const oldestPerson = getOldestPerson(people);
     return oldestPerson.age - youngestPerson.age;
 }
+
+// 8. You get an array of numbers, return the sum of all of the positives ones.
+// Example [1,-4,7,12] => 1 + 7 + 12 = 20
+// Note: if there is nothing to sum, the sum is default to 0.
+
+function getPositiveSum(arrayOfNumbers) {
+    let sumOfNumbers = 0;
+    for (let i = 0; i < arrayOfNumbers.length; i++) {
+        if (arrayOfNumbers[i] > 0) {
+            sumOfNumbers = sumOfNumbers + arrayOfNumbers[i];
+        }
+    }
+    return sumOfNumbers;
+}
+
+console.log(getPositiveSum([[1,-4,7,12]]));
