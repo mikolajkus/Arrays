@@ -111,7 +111,6 @@ console.log(lettersObject);
 // 7.Write the getAgeDifference function that finds the difference between the youngest and oldest person.
 // Inside of the getAgeDifference function call the getYoungestPerson  and getOldestPerson functions that you write yourself.
 
-
 const peopleArray = [
   {
     name: 'Adam',
