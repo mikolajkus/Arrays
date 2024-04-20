@@ -170,4 +170,18 @@ function getPositiveSum(arrayOfNumbers) {
     return sumOfNumbers;
 }
 
-console.log(getPositiveSum([[1,-4,7,12]]));
+console.log(getPositiveSum([1,-4,7,12]));
+
+// 9. Complete the square sum function so that it squares each number passed into it and then sums the results together.//
+// For example, for [1, 2, 2] it should return 9.
+
+function getSquareSum(arrayOfNumbers) {
+    let squaredSum = 0;
+    for (let i = 0; i < arrayOfNumbers.length; i++) {
+        const squaredNumber = arrayOfNumbers[i] ** 2;
+        squaredSum = squaredSum + squaredNumber;
+    }
+    return squaredSum;
+}
+
+console.log(getSquareSum([1, 2, 2]));
