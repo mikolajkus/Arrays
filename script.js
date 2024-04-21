@@ -264,3 +264,16 @@ function getDoubledArray(arrayOfNumbers){
 }
 
 console.log(getDoubledArray([1, 2, 3]));
+
+//  15. Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+
+function getInvertedArray(array) {
+    let invertedArray = [];
+    for (let i = 0; i < array.length; i++) {
+        const invertedNumber = array[i] * -1;
+        invertedArray.push(invertedNumber);
+    }
+    return invertedArray;
+}
+
+console.log(getInvertedArray([1, -2, 3, -4, 5]));
