@@ -237,3 +237,30 @@ function getReversedArrayOfDigits(numbers) {
 }
 
 console.log(getReversedArrayOfDigits(35231));
+
+// 13. Write a function findNeedle() that takes an array full of junk but containing one "needle".
+
+function findNeedle(haystack) {
+    for (let i = 0; i < haystack.length; i++) {
+        if (haystack[i] === 'needle') {
+            return 'found the needle at position ' + i;
+        }
+    }
+}
+
+console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]));
+
+//  14. Given an array of integers, return a new array with each value doubled.
+// For example:
+// [1, 2, 3] --> [2, 4, 6]
+
+function getDoubledArray(arrayOfNumbers){
+    let array = [];
+    for (let i = 0; i < arrayOfNumbers.length; i++) {
+        const duplicatedValue = arrayOfNumbers[i] + arrayOfNumbers[i];
+        array.push(duplicatedValue);
+    }
+    return array;
+}
+
+console.log(getDoubledArray([1, 2, 3]));
