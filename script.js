@@ -193,10 +193,10 @@ console.log(getSquareSum([1, 2, 2]));
 // patrick feeney => P.F
 
 function getInitials(name) {
-    const names = name.split(' ');
-    let initials = names[0].substring(0, 1).toUpperCase();
-    if (names.length > 1) {
-        initials += '.' + names[names.length - 1].substring(0, 1).toUpperCase();
+    const splitName = name.split(' ');
+    let initials = splitName[0].substring(0, 1).toUpperCase();
+    if (splitName.length > 1) {
+        initials += '.' + splitName[splitName.length - 1].substring(0, 1).toUpperCase();
     }
     return initials;
 }
