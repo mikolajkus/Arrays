@@ -91,7 +91,7 @@ console.log(isPalindrome('Hello!')); // false
 
 function countLetters(text) {
     const lettersCount = {};
-    const processedText = text.replace(/\s/g, '').toLowerCase();
+    const processedText = text.replaceAll(' ', '').toLowerCase();
     for (let i = 0; i < processedText.length; i++) {
         const character = processedText[i];
         if (/[a-z]/.test(character)) {
