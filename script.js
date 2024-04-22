@@ -208,7 +208,7 @@ console.log(getInitials("patrick feeney")); // Output: "P.F"
 function getCountSheep(sheep) {
     let numberOfSheep = 0;
     for (let i = 0; i < sheep.length; i++) {
-        if (sheep[i] === true) {
+        if (sheep[i]) {
             numberOfSheep++;
         }
     }
