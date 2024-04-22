@@ -44,11 +44,12 @@ console.log(getSmallestNumberByForLoop([200, 25, 4, 123, 87])); // 4
 // don't modify the array passed as an argument.
 
 function getSquaredNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.map(
-        function (number) {
-            return number ** 2;
-        }
-    )
+    let squaredArray = [];
+    for (let i = 0; i < arrayOfNumbers.length; i++) {
+        const squaredNumber = arrayOfNumbers[i] ** 2;
+        squaredArray.push(squaredNumber);
+    }
+    return squaredArray;
 }
 
 console.log(getSquaredNumbers([1, 2, 3, 4, 5])); // [1, 4, 9, 16, 25]
@@ -208,17 +209,17 @@ console.log(getInitials("patrick feeney")); // Output: "P.F"
 // 11. Consider an array/list of sheep where some sheep may be missing from their place.
 // We need a function that counts the number of sheep present in the array (true means present).
 
-function getCountSheeps(sheep) {
-    let numberOfSheeps = 0;
+function getCountSheep(sheep) {
+    let numberOfSheep = 0;
     for (let i = 0; i < sheep.length; i++) {
         if (sheep[i] === true) {
-            numberOfSheeps++;
+            numberOfSheep++;
         }
     }
-    return numberOfSheeps;
+    return numberOfSheep;
 }
 
-console.log(getCountSheeps(
+console.log(getCountSheep(
     [true,  true,  true,  false,
     true,  true,  true,  true ,
     true,  false, true,  false,
@@ -295,7 +296,7 @@ function getSumOfNumbers(numbers) {
 
 console.log(getSumOfNumbers([]));
 
-// 17. I'm new to coding and now I want to get the sum of two arrays... Actually the sum of all their elements. I'll appreciate for your help.
+// 17. I'm new to coding, and now I want to get the sum of two arrays... Actually the sum of all their elements. I'll appreciate for your help.
 // P.S. Each array includes only integer numbers. Output is a number too.
 
 // create the getArraySum function that sums the elements of a single array and use it in the arrayPlusArray function.
