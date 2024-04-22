@@ -261,8 +261,8 @@ console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "rand
 function getDoubledArray(arrayOfNumbers){
     let doubledArray = [];
     for (let i = 0; i < arrayOfNumbers.length; i++) {
-        const duplicatedValue = arrayOfNumbers[i] * 2;
-        doubledArray.push(duplicatedValue);
+        const doubledValue = arrayOfNumbers[i] * 2;
+        doubledArray.push(doubledValue);
     }
     return doubledArray;
 }
