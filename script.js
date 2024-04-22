@@ -221,7 +221,9 @@ console.log(getCountSheep(
     true,  false, true,  false,
     true,  false, false, true ,
     true,  true,  true,  true ,
-    false, false, true,  true]));
+    false, false, true,  true]
+    )
+);
 
 // 12. Convert number to reversed array of digits
 // Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
