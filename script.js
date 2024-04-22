@@ -148,7 +148,7 @@ function getOldestPerson(people) {
             return firstUser.age - secondUser.age;
         }
     )
-    return usersSortedByAge[usersSortedByAge.length - 1];
+    return usersSortedByAge.pop();
 }
 
 function getAgeDifference(people) {
@@ -171,7 +171,7 @@ function getPositiveSum(arrayOfNumbers) {
     return sumOfNumbers;
 }
 
-console.log(getPositiveSum([1,-4,7,12]));
+console.log(getPositiveSum([1, -4, 7, 12]));
 
 // 9. Complete the square sum function so that it squares each number passed into it and then sums the results together.//
 // For example, for [1, 2, 2] it should return 9.
