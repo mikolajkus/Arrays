@@ -288,9 +288,6 @@ console.log(getInvertedArray([1, -2, 3, -4, 5]));
 
 function getSumOfNumbers(numbers) {
     let sumOfNumbers = 0;
-    if (numbers.length === 0) {
-        return 0;
-    }
     for (let i = 0; i < numbers.length; i++) {
         sumOfNumbers = sumOfNumbers + numbers[i];
     }
