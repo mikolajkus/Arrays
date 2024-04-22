@@ -350,12 +350,12 @@ console.log(getAverage([2, 3, 4, 5]));
 // You know that there are a certain number there (n), but your son is too young to just appreciate the full number, he has to start counting them from 1.
 // As a good parent, you will sit and count with him. Given the number (n), populate an array with all numbers up to and including that number, but excluding zero.
 
-function getMonkeyCount(number) {
-    let countedMonkey = [];
-    for (let i = 1; i <= number; i++) {
-        countedMonkey.push(i);
+function getMonkeysCount(numberOfMonkeys) {
+    let countedMonkeys = [];
+    for (let i = 1; i <= numberOfMonkeys; i++) {
+        countedMonkeys.push(i);
     }
-    return countedMonkey;
+    return countedMonkeys;
 }
 
-console.log(getMonkeyCount([10]));
+console.log(getMonkeysCount([10]));
