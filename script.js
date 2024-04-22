@@ -320,9 +320,9 @@ console.log(getTheSumOfTwoArrays([1, 2, 3], [4, 5, 6]));
 // 18. Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...".
 // Input will always be valid, i.e. no negative integers.
 
-function getSheepCount (number){
+function getSheepCount(numberOfSheep){
     let murmur = '';
-    for (let i = 1; i <= number; i++) {
+    for (let i = 1; i <= numberOfSheep; i++) {
         murmur += i + ' sheep...';
     }
     return murmur;
