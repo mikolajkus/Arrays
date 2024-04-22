@@ -134,21 +134,21 @@ const peopleArray = [
 console.log(getAgeDifference(peopleArray)); // 70
 
 function getYoungestPerson(people) {
-    const userSortedByAge = people.slice().sort(
+    const usersSortedByAge = people.slice().sort(
         function (firstUser, secondUser) {
             return firstUser.age - secondUser.age;
         }
     )
-    return userSortedByAge[0];
+    return usersSortedByAge[0];
 }
 
 function getOldestPerson(people) {
-    const userSortedByAge = people.slice().sort(
+    const usersSortedByAge = people.slice().sort(
         function (firstUser, secondUser) {
             return firstUser.age - secondUser.age;
         }
     )
-    return userSortedByAge[userSortedByAge.length - 1];
+    return usersSortedByAge[usersSortedByAge.length - 1];
 }
 
 function getAgeDifference(people) {
