@@ -232,7 +232,12 @@ function getReversedArrayOfDigits(numbers) {
     const convertedToString = numbers.toString();
     const splitString = convertedToString.split('');
     const reverseString = splitString.reverse();
-    return reverseString.map(Number);
+    const reversedNumbers = [];
+    for (let i = 0; i < reverseString.length; i++) {
+        reversedNumbers.push(Number(reverseString[i]));
+    }
+
+    return reversedNumbers;
 }
 
 console.log(getReversedArrayOfDigits(35231));
