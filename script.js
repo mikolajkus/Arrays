@@ -75,8 +75,8 @@ console.log(getReversedString('Arrays')); // 'syarrA'
 
 function isPalindrome(string) {
     const charactersReplacedToLoweCase = string.replace(/\s/g, '').toLowerCase();
-    const reverseString = getReversedString(charactersReplacedToLoweCase);
-    return reverseString === charactersReplacedToLoweCase;
+    const reversedString = getReversedString(charactersReplacedToLoweCase);
+    return reversedString === charactersReplacedToLoweCase;
 }
 
 
