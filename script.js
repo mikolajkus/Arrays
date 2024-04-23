@@ -194,7 +194,10 @@ console.log(getSquareSum([1, 2, 2]));
 // patrick feeney => P.F
 
 function getInitials(name) {
-    const [firstName, lastName] = name.split(' ');
+    // const [firstName, lastName] = name.split(' ');
+    const words = name.split(' ');
+    const firstName = words[0];
+    const lastName = words[1];
     return `${firstName[0].toUpperCase()}.${lastName[0].toUpperCase()}`;
 }
 
@@ -216,12 +219,12 @@ function getCountSheep(sheep) {
 }
 
 console.log(getCountSheep([
-    true,  true,  true,  false,
-    true,  true,  true,  true ,
-    true,  false, true,  false,
-    true,  false, false, true ,
-    true,  true,  true,  true ,
-    false, false, true,  true
+    true, true, true, false,
+    true, true,  true, true ,
+    true, false, true, false,
+    true, false, false, true,
+    true, true, true, true,
+    false, false, true, true
 ]));
 
 // 12. Convert number to reversed array of digits
