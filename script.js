@@ -235,7 +235,6 @@ function getReversedArrayOfDigits(numbers) {
     for (let i = 0; i < reverseString.length; i++) {
         reversedNumbers.push(Number(reverseString[i]));
     }
-
     return reversedNumbers;
 }
 
